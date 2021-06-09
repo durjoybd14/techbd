@@ -5,6 +5,7 @@ import Tablets from "./Components/Tablets/Tablets";
 import Televisions from "./Components/Televisions/Televisions";
 import Cameras from "./Components/Cameras/Cameras";
 import Laptops from "./Components/Laptops/Laptops";
+import ScrollToTop from "react-scroll-to-top";
 
 function App() {
   return (
@@ -38,6 +39,10 @@ function App() {
           <h1>No Match</h1>
         </Route>
       </Switch>
+      <ScrollToTop
+        smooth
+        style={{ backgroundColor: "#12d0d9", padding: "5px" }}
+      />
     </Router>
   );
 }
