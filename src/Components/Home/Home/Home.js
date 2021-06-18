@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../../Footer/Footer";
+import Slide from "../../Slide/Slide";
 import Banner from "../Banner/Banner";
 import Contact from "../Contact/Contact";
 import Header from "../Header/Header";
@@ -11,6 +12,7 @@ const Home = () => {
     <>
       <Header />
       <Banner />
+      <Slide />
       <Products />
       <Testimonial />
       <Contact />
