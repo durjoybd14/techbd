@@ -127,7 +127,7 @@ const datas = [
 const Products = () => {
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto ">
+      <div className="container px-5 py-24 mx-auto">
         <div class="text-center mb-15">
           <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
             Our Brand New Products
@@ -141,7 +141,7 @@ const Products = () => {
             <div class="w-16 h-1 rounded-full bg-purple-500 inline-flex"></div>
           </div>
         </div>
-        <div className="flex flex-wrap m-4 ">
+        <div className="flex flex-wrap -m-4">
           {datas.map((data) => (
             <ProductDetails data={data} key={data.id}></ProductDetails>
           ))}

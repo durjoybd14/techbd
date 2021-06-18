@@ -3,18 +3,23 @@ import React from "react";
 const TestimonialDetails = (props) => {
   const { name, img, comment } = props.user;
   return (
-    <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
-      <div className="h-full text-center">
-        <img
-          alt="testimonial"
-          className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-          src={img}
-        />
-        <p className="leading-relaxed">{comment}</p>
-        <span className="inline-block h-1 w-10 rounded bg-purple-500 mt-6 mb-4"></span>
-        <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
-          {name}
-        </h2>
+    <div className="lg:w-1/3 md:w-1/2 my-10">
+      <div className="h-full py-4 px-8 bg-white shadow-lg rounded-lg mx-2 border">
+        <div className="flex justify-center md:justify-end -mt-16">
+          <img
+            className="w-20 h-20 object-cover rounded-full border-2 border-indigo-500"
+            src={img}
+            alt=""
+          />
+        </div>
+        <div>
+          <p className="mt-2 text-gray-600">{comment}</p>
+        </div>
+        <div className="flex justify-end mt-4">
+          <a href="#" className="text-xl font-medium text-indigo-500">
+            {name}
+          </a>
+        </div>
       </div>
     </div>
   );
