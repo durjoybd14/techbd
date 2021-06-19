@@ -8,36 +8,42 @@ import img6 from "../../Images/tablets/3.jpg";
 import img7 from "../../Images/televisions/2.jpg";
 import img8 from "../../Images/tablets/2.jpg";
 
-// import Swiper core and required modules
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.min.css";
+import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/components/pagination/pagination.min.css";
-import "swiper/components/navigation/navigation.min.css";
 
 import "./styles.css";
 
 // import Swiper core and required modules
-import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
+import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper/core";
 
 // install Swiper modules
-SwiperCore.use([Autoplay, Pagination, Navigation]);
+SwiperCore.use([Autoplay, EffectCoverflow, Pagination]);
 
 const Slide = () => {
   return (
     <>
       <Swiper
-        spaceBetween={30}
+        effect={"coverflow"}
+        grabCursor={true}
         centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
+        pagination={true}
         className="mySwiper"
       >
         <SwiperSlide>
