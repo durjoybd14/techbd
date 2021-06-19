@@ -29,9 +29,9 @@ const Slide = () => {
     <>
       <Swiper
         effect={"coverflow"}
-        grabCursor={true}
+        // grabCursor={true}
         centeredSlides={true}
-        slidesPerView={"auto"}
+        // slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
